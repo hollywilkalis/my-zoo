@@ -9,9 +9,8 @@
 </ul>
 
 <div *ngIf="selectedAnimal">
-
-  <h3>{{ selectedAnimal.name }}</h3>
-  <h4>Species: {{selectedAnimal.species}}</h4>
+  <h5>About the selected animal</h5>
+  <h4>{{ selectedAnimal.name }}, {{selectedAnimal.species}}</h4>
   <div>
     <ul>
       <li>Age: <input [(ngModel)]="selectedAnimal.age" placeholder="age"></li>

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AnimalsComponent } from './animals/animals.component';
+import { AnimalInputComponent } from './animal-input/animal-input.component';
 
 
 
@@ -11,6 +12,7 @@ import { AnimalsComponent } from './animals/animals.component';
   declarations: [
     AppComponent,
     AnimalsComponent,
+    AnimalInputComponent,
   ],
   imports: [
     BrowserModule,

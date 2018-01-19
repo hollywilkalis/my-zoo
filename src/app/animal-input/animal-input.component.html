@@ -1,0 +1,24 @@
+<h4>Add a new animal</h4>
+<form id="addAnimal">
+  <input class="form-control" type="text" placeholder="Name" #name>
+  <input class="form-control" type="text" placeholder="Species" #species>
+  <input class="form-control" type="text" placeholder="location" #location>
+  <input class="form-control" type="text" placeholder="age" #age>
+  <input class="form-control" type="text" placeholder="diet" #diet>
+  <input class="form-control" type="text" placeholder="Number of caretakers needed" #caretakers>
+  <input class="form-control" type="text" placeholder="Sex of animal" #sex>
+  <input class="form-control" type="text" placeholder="What are their likes?" #likes>
+  <input class="form-control" type="text" placeholder="What are their dislikes?" #dislikes>
+  <button type='button' class="btn btn-primary" (click)="add(name.value, species.value, location.value, age.value, diet.value, caretakers.value, sex.value, likes.value, dislikes.value);
+      name.value='';
+      species.value='';
+      location.value='';
+      age.value='';
+      diet.value='';
+      caretakers.value='';
+      sex.value='';
+      likes.value='';
+      dislikes.value=''">
+      Add animal
+    </button>
+</form>
