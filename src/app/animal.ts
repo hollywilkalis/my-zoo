@@ -1,6 +1,6 @@
 export class Animal {
-  species: string;
   name: string;
+  species: string;
   age: number;
   diet: string;
   location: string;

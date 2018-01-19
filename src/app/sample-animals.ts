@@ -1,7 +1,7 @@
 import { Animal } from './animal';
 
 export const ANIMALS: Animal[] = [
-  {species: 'Ocelot',
+  { species: 'Ocelot',
   name: 'Prince',
   age: 4,
   diet: 'carnivore',
@@ -9,9 +9,9 @@ export const ANIMALS: Animal[] = [
   caretakers: 6,
   sex: 'male',
   likes: 'laying in the sunshine',
-  dislikes: 'toys that are not rope-based'},
+  dislikes: 'toys that are not rope-based' },
 
-  {species: 'Northwest Black Tailed Deer',
+  { species: 'Northwest Black Tailed Deer',
   name: 'Tinkerbell',
   age: 8,
   diet: 'carnivore',
@@ -19,16 +19,15 @@ export const ANIMALS: Animal[] = [
   caretakers: 2,
   sex: 'female',
   likes: 'roots and leaves',
-  dislikes: 'loud noises'},
+  dislikes: 'loud noises' },
 
-  {species: "Arctic Fox",
+  { species: "Arctic Fox",
   name: "Moon",
   age: 2,
   diet: "Carnivore",
   location: "Northern Trail",
   caretakers: 5,
-  sex: "female",
-  likes: "Cool shade",
-  dislikes: "Loud noises",
-}
+  sex: 'female',
+  likes: 'Cool shade',
+  dislikes: 'Loud noises' }
 ];

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../animal';
-import { ANIMALS } from '../sample-animals'
+import { ANIMALS } from '../sample-animals';
 
 @Component({
   selector: 'app-animals',
@@ -10,10 +10,16 @@ import { ANIMALS } from '../sample-animals'
 
 export class AnimalsComponent implements OnInit {
   animals = ANIMALS;
+
+  selectedAnimal: Animal;
+
   constructor() { }
 
   ngOnInit() {
+  }
 
+  onSelect(animal: Animal): void {
+    this.selectedAnimal = animal;
   }
 
 }
