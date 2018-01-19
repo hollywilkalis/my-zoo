@@ -25,3 +25,10 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Project requirements
+
+* Log information on new animals via a user form: species, name, age, diet, location, number of caretakers needed, sex, likes and dislikes.
+* View all animals logged
+* Filter the list of animals logged by young (less than 2 years old) or mature (older than 2 years old)
+* Ability to click on an animal to edit its name, age or number of caretakers
