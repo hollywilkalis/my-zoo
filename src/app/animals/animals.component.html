@@ -1,23 +1,27 @@
 
 <h2>Meet the animals</h2>
 <ul class="animals">
-  <li *ngFor="let animal of animals" (click)="onSelect(animal)">{{animal.name}}</li>
+  <li *ngFor="let animal of animals"
+  [class.selected]="animal === selectedAnimal"
+  (click)="onSelect(animal)">
+  {{animal.name}}
+</li>
 </ul>
 
 <div *ngIf="selectedAnimal">
 
-  <h2>{{ selectedAnimal.name }} Details</h2>
-  <div><span>Species: </span>{{selectedAnimal.species}}</div>
+  <h3>{{ selectedAnimal.name }}</h3>
+  <h4>Species: {{selectedAnimal.species}}</h4>
   <div>
-    <input [(ngModel)]="selectedAnimal.name" placeholder="name">
-    <input [(ngModel)]="selectedAnimal.species" placeholder="species">
-    <input [(ngModel)]="selectedAnimal.age" placeholder="age">
-    <input [(ngModel)]="selectedAnimal.diet" placeholder="diet">
-    <input [(ngModel)]="selectedAnimal.location" placeholder="location">
-    <input [(ngModel)]="selectedAnimal.caretakers" placeholder="caretakers">
-    <input [(ngModel)]="selectedAnimal.sex" placeholder="sex">
-    <input [(ngModel)]="selectedAnimal.likes" placeholder="likes">
-    <input [(ngModel)]="selectedAnimal.dislikes" placeholder="dislikes">
+    <ul>
+      <li>Age: <input [(ngModel)]="selectedAnimal.age" placeholder="age"></li>
+      <li>Type of diet: <input [(ngModel)]="selectedAnimal.diet" placeholder="diet"></li>
+      <li>Location in zoo: <input [(ngModel)]="selectedAnimal.location" placeholder="location"></li>
+      <li>Number of caretakers required: <input [(ngModel)]="selectedAnimal.caretakers" placeholder="caretakers"></li>
+      <li>Sex: <input [(ngModel)]="selectedAnimal.sex" placeholder="sex"></li>
+      <li>Likes: <input [(ngModel)]="selectedAnimal.likes" placeholder="likes"></li>
+      <li>Dislikes: <input [(ngModel)]="selectedAnimal.dislikes" placeholder="dislikes"></li>
+    </ul>
   </div>
 
 </div>

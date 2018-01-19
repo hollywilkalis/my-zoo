@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Animal } from '../animal';
 import { ANIMALS } from '../sample-animals';
 
@@ -13,6 +13,8 @@ export class AnimalsComponent implements OnInit {
 
   selectedAnimal: Animal;
 
+  @Input() animal: Animal;
+
   constructor() { }
 
   ngOnInit() {
@@ -21,5 +23,4 @@ export class AnimalsComponent implements OnInit {
   onSelect(animal: Animal): void {
     this.selectedAnimal = animal;
   }
-
 }

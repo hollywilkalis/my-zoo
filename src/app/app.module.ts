@@ -10,7 +10,7 @@ import { AnimalsComponent } from './animals/animals.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AnimalsComponent
+    AnimalsComponent,
   ],
   imports: [
     BrowserModule,
