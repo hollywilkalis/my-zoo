@@ -1,3 +1,28 @@
-<h2>{{ animal.name }}</h2>
-<div><span>age: </span>{{animal.age}}</div>
-<div><span>species: </span>{{animal.species}}</div>
+<!-- <div>
+    <label>name:
+      <input [(ngModel)]="animal.name" placeholder="name">
+      <input [(ngModel)]="animal.species" placeholder="species">
+      <input [(ngModel)]="animal.age" placeholder="age">
+      <input [(ngModel)]="animal.diet" placeholder="diet">
+      <input [(ngModel)]="animal.location" placeholder="location">
+      <input [(ngModel)]="animal.caretakers" placeholder="caretakers">
+      <input [(ngModel)]="animal.sex" placeholder="sex">
+      <input [(ngModel)]="animal.likes" placeholder="likes">
+      <input [(ngModel)]="animal.dislikes" placeholder="dislikes">
+    </label>
+</div> -->
+
+<h2>Meet the animals</h2>
+<div class="animals">
+  <div *ngFor="let animal of animals">
+    <p>Name: {{animal.name}}<br>
+    Species: {{animal.species}}<br>
+    Age: {{animal.age}}<br>
+    Diet: {{animal.diet}}<br>
+    Location in zoo: {{animal.location}}<br>
+    Caretakers needed: {{animal.caretakers}}<br>
+    Sex: {{animal.sex}}<br>
+    Likes: {{animal.likes}}<br>
+    Dislikes: {{animal.dislikes}}</p>  
+  </div>
+</div>

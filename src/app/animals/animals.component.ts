@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Animal } from '../animal';
+import { ANIMALS } from '../sample-animals'
 
 @Component({
   selector: 'app-animals',
@@ -8,17 +9,7 @@ import { Animal } from '../animal';
 })
 
 export class AnimalsComponent implements OnInit {
-  animal: Animal = {
-  species: "Arctic Fox",
-  name: "Moon",
-  age: 2,
-  diet: "Carnivore",
-  location: "Northern Trail",
-  caretakers: 5,
-  sex: "female",
-  likes: "Cool shade",
-  dislikes: "Loud noises",
-};
+  animals = ANIMALS;
   constructor() { }
 
   ngOnInit() {
