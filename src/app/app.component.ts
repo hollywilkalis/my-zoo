@@ -7,8 +7,13 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title = 'My Zoo';
-  animals: Animal[];
+  title: string = 'My Zoo';
+
+  animals: Animal[] = [
+    new Animal('Ocelot', 'Prince', 4, 'carnivore', 'Tropical Rain Forest Building', 6, 'male', 'laying in the sunshine', 'toys that are not rope-based'),
+    new Animal('Northwest Black Tailed Deer', 'Tinkerbell', 8, 'carnivore', 'Northern Trail', 2, 'female', 'roots and leaves', 'loud noises'),
+    new Animal("Arctic Fox", "Moon", 2, "Carnivore", "Northern Trail", 5, "male", "toys", 'Loud noises')
+  ];
 }
 
 export class Animal {

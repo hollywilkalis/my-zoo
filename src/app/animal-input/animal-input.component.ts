@@ -21,5 +21,6 @@ export class AnimalInputComponent implements OnInit {
   add(name, species, age, diet, location, caretakers, sex, likes, dislikes){
     const newAnimal: Animal = new Animal(name, species, age, diet, location, caretakers, sex, likes, dislikes);
     this.animals.push(newAnimal);
+    console.log(newAnimal);
   }
 }
