@@ -14,12 +14,17 @@ export class AnimalsComponent implements OnInit {
 
   selectedAnimal: Animal = null;
 
+  constructor() {}
 
   ngOnInit() {
   }
 
-  onSelect(animal: Animal): void {
-    this.selectedAnimal = animal;
+  editAnimal(clickedAnimal) {
+    this.selectedAnimal = clickedAnimal;
   }
+
+  // onSelect(animal: Animal): void {
+  //   this.selectedAnimal = animal;
+  // }
 
 }

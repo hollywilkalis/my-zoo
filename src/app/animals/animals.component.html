@@ -1,24 +1,11 @@
 
 <h2>Meet the animals</h2>
-<ul class="animals">
-  <li *ngFor="let animal of childAnimals">
-  {{animal.name}}
-</li>
-</ul>
-
-<div *ngIf="selectedAnimal">
-  <h5>About the selected animal</h5>
-  <h4>{{ selectedAnimal.name }}, {{selectedAnimal.species}}</h4>
-  <div>
-    <ul>
-      <li>Age: <input [(ngModel)]="selectedAnimal.age" placeholder="age"></li>
-      <li>Type of diet: <input [(ngModel)]="selectedAnimal.diet" placeholder="diet"></li>
-      <li>Location in zoo: <input [(ngModel)]="selectedAnimal.location" placeholder="location"></li>
-      <li>Number of caretakers required: <input [(ngModel)]="selectedAnimal.caretakers" placeholder="caretakers"></li>
-      <li>Sex: <input [(ngModel)]="selectedAnimal.sex" placeholder="sex"></li>
-      <li>Likes: <input [(ngModel)]="selectedAnimal.likes" placeholder="likes"></li>
-      <li>Dislikes: <input [(ngModel)]="selectedAnimal.dislikes" placeholder="dislikes"></li>
-    </ul>
+<div>
+  <div class="card" *ngFor="let animal of childAnimals">
+    <div class="card-header">{{animal.species}}</div>
+      <div class="card-body">
+        <h5 class="card-title">Name: {{animal.name}}</h5>
+        <p class="card-text">Location: {{animal.location}}</p>
+      </div>
   </div>
-
 </div>
