@@ -11,6 +11,7 @@ import { Animal } from '../app.component';
 export class AnimalsComponent implements OnInit {
 
   @Input() childAnimals: Animal[];
+  @Input() childDisplay: boolean;
 
   selectedAnimal: Animal = null;
 
@@ -19,12 +20,14 @@ export class AnimalsComponent implements OnInit {
   ngOnInit() {
   }
 
+  toggle() {
+    this.childDisplay = !this.childDisplay;
+  }
+  
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
+    this.childDisplay = true;
   }
 
-  // onSelect(animal: Animal): void {
-  //   this.selectedAnimal = animal;
-  // }
 
 }
