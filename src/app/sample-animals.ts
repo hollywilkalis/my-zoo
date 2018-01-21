@@ -1,4 +1,4 @@
-import { Animal } from './animal';
+import { Animal } from './app.component';
 
 export const ANIMALS: Animal[] = [
   { species: 'Ocelot',

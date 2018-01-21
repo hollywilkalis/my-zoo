@@ -1,9 +1,7 @@
 
 <h2>Meet the animals</h2>
 <ul class="animals">
-  <li *ngFor="let animal of animals"
-  [class.selected]="animal === selectedAnimal"
-  (click)="onSelect(animal)">
+  <li *ngFor="let animal of childAnimals">
   {{animal.name}}
 </li>
 </ul>

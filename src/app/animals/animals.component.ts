@@ -1,6 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { Animal } from '../app.component';
-import { ANIMALS } from '../sample-animals';
+// import { ANIMALS } from '../sample-animals';
 
 @Component({
   selector: 'app-animals',
@@ -10,11 +10,9 @@ import { ANIMALS } from '../sample-animals';
 
 export class AnimalsComponent implements OnInit {
 
-  animals = ANIMALS;
+  @Input() childAnimals: Animal[];
 
-  selectedAnimal: Animal;
-
-  @Input() animal: Animal;
+  selectedAnimal: Animal = null;
 
 
   ngOnInit() {
