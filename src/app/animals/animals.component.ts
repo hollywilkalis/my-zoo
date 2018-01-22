@@ -30,5 +30,4 @@ export class AnimalsComponent implements OnInit {
     this.childDisplay = true;
   }
 
-
 }

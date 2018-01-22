@@ -1,4 +1,14 @@
-.selected {
+#edit-info {
+  margin-top: 20px;
+  border: 2px solid darkgrey;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.card {
+  margin-bottom: 10px;
+}
+/* .selected {
   background-color: #CFD8DC !important;
   color: white;
 }
@@ -30,4 +40,4 @@
 .animals .text {
   position: relative;
   top: -3px;
-}
+} */
