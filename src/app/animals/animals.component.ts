@@ -12,12 +12,17 @@ export class AnimalsComponent implements OnInit {
 
   @Input() childAnimals: Animal[];
   @Input() childDisplay: boolean;
+  @Input() filter: number;
 
   selectedAnimal: Animal = null;
 
   constructor() {}
 
   ngOnInit() {
+  }
+
+  toggle() {
+    this.childDisplay = !this.childDisplay;
   }
 
   editAnimal(clickedAnimal) {

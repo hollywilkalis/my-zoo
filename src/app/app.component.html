@@ -2,7 +2,13 @@
   <h1>{{ title }}!</h1>
   <div class="row">
     <div class="col-md-8">
-      <app-animals [childAnimals]="animals" [childDisplay]="display"></app-animals>
+      <h4>Filter Animals by Age</h4>
+        <select class="form-control mb-2" (change)="onChange($event.target.value)">
+          <option value=0>Show all animals</option>
+          <option value=2>Show only young animals (younger than 2)</option>
+          <option value=3>Show only mature animals (2 or older)</option>
+        </select>
+      <app-animals [childAnimals]="animals" [filter]="filterByAge" [childDisplay]="display"></app-animals>
     </div>
     <div class="col-md-4">
       <app-animal-input [animals]="animals"></app-animal-input>
