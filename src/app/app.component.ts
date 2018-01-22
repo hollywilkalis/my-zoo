@@ -15,8 +15,6 @@ export class AppComponent {
     new Animal("Moon", "Arctic Fox", "Northern Trail", 2, "Carnivore",  5, "male", "toys", 'Loud noises')
   ];
 
-  display: boolean = false;
-
 }
 
 
