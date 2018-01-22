@@ -1,7 +1,7 @@
 
-<h2>Animals in this zoo</h2>
+<h3>Animals in this zoo</h3>
 <div>
-  <div class="card" *ngFor="let animal of childAnimals">
+  <div *ngFor="let animal of childAnimals | ageFilter:filter">
     <div class="card-header"><h5 class="card-title">{{animal.name | uppercase }}</h5></div>
       <div class="card-body">
         <p class="card-text">Location: {{animal.location}}<br>
@@ -13,7 +13,7 @@
         Likes: {{animal.likes}}<br>
         Dislikes: {{animal.dislikes}}</p>
       </div>
-      <button type="button" class="btn btn-danger mb-1" (click)="editAnimal(animal)">Edit this animal's information</button>
+      <button type="button" class="btn btn-primary mb-1" (click)="editAnimal(animal)">Edit this animal's information</button>
   </div>
 </div>
 <div>

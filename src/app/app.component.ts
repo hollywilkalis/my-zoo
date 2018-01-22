@@ -14,6 +14,16 @@ export class AppComponent {
     new Animal('Tinkerbell', 'Northwest Black Tailed Deer', 'Northern Trail', 8, 'carnivore', 2, 'female', 'roots and leaves', 'loud noises'),
     new Animal("Moon", "Arctic Fox", "Northern Trail", 2, "Carnivore", 5, "male", "toys", 'Loud noises')
   ];
+  
+  display: boolean = false;
+
+  toggleDisplay() {
+    this.display = !this.display;
+  }
+
+  saveChanges() {
+  this.display = false;
+  }
 
   filterByAge: number = 0;
 
@@ -21,7 +31,6 @@ export class AppComponent {
     this.filterByAge = parseInt(optionFromMenu);
   }
 }
-
 
 export class Animal {
   constructor (
