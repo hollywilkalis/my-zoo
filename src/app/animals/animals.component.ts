@@ -1,6 +1,6 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { Animal } from '../app.component';
-// import { ANIMALS } from '../sample-animals';
+
 
 @Component({
   selector: 'app-animals',
@@ -10,24 +10,28 @@ import { Animal } from '../app.component';
 
 export class AnimalsComponent implements OnInit {
 
-  @Input() childAnimals: Animal[];
-  @Input() childDisplay: boolean;
+  @Input() childAnimals: Animal[] = [];
+  @Input() childDisplay: boolean = true;
   @Input() filter: number;
 
   selectedAnimal: Animal = null;
 
+
   constructor() {}
+
+  // display: boolean = false;
 
   ngOnInit() {
   }
 
-  toggle() {
-    this.childDisplay = !this.childDisplay;
-  }
+  // toggle() {
+  //   this.childDisplay = !this.childDisplay;
+  // }
 
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
     this.childDisplay = true;
   }
+
 
 }
