@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { Component, OnInit, Input, Output} from '@angular/core';
 import { Animal } from '../app.component';
 
 
@@ -10,27 +10,25 @@ import { Animal } from '../app.component';
 
 export class AnimalsComponent implements OnInit {
 
-  @Input() childAnimals: Animal[] = [];
-  @Input() childDisplay: boolean = true;
+  @Input() childAnimals: Animal[]; //brings in animal array as childAnimals
+  // @Input() childDisplay: boolean = true;
   @Input() filter: number;
 
-  selectedAnimal: Animal = null;
-
+  selectedAnimal: Animal;
 
   constructor() {}
 
-  // display: boolean = false;
-
   ngOnInit() {
+    console.log(this.childAnimals);
+    console.log(this.selectedAnimal);
+
   }
 
-  // toggle() {
-  //   this.childDisplay = !this.childDisplay;
-  // }
+  editAnimal(animal: Animal): void {
+    this.selectedAnimal = animal;
+    debugger
+    // this.childDisplay = true;
 
-  editAnimal(clickedAnimal) {
-    this.selectedAnimal = clickedAnimal;
-    this.childDisplay = true;
   }
 
 
