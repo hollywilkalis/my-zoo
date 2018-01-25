@@ -1,6 +1,38 @@
-# MyZoo
+# My Zoo
+
+#### Epicodus Javascript Week 3, January 19, 2018
+
+#### By Holly Wilkalis
+
+## Description
+
+Creates an animal list for a hypothetical zoo, including input and edit functions and the ability to filter by age.
+
+The user will be able to:
+* Log information on new animals via a user form: species, name, age, diet, location, number of caretakers needed, sex, likes and dislikes.
+* View all list of all animals
+* Filter the list of animals by age categories: young (less than 2 years old) or mature (2 or older)
+* Ability to edit animal's name, age or number of caretakers
+
+## Project structure
+* Animal class constructor is contained in app.component.
+* Code for animal input is contained in the animal-input.component.
+* Animal display and edit code is contained in animals.component.
+
+
+
+## Setup/Installation Requirements
+
+To clone this project:
+* In terminal (or other tool used to access command line), navigate to location where files will be saved
+* To clone, run command $ git clone https://github.com/hollywilkalis/my-zoo.git
+* Change into project directory $ cd my-zoo
+
+## Technologies Used
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+
+It also uses Bootstrap 4.0.0-beta.3.
 
 ## Development server
 
@@ -14,21 +46,16 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Project requirements
+## Support and contact details
 
-* Log information on new animals via a user form: species, name, age, diet, location, number of caretakers needed, sex, likes and dislikes.
-* View all animals logged
-* Filter the list of animals logged by young (less than 2 years old) or mature (older than 2 years old)
-* Ability to click on an animal to edit its name, age or number of caretakers
+For support or questions, e-mail holly.wilkalis@gmail.com.
+
+### License
+
+*MIT license*
+
+Copyright (c) 2018 **Holly Wilkalis**

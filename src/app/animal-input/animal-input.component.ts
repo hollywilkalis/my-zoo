@@ -15,7 +15,7 @@ export class AnimalInputComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  //TAKES DATA FROM FORM, PUSHES TO THE ANIMAL ARRAY
   add(name, species, location, age, diet, caretakers, sex, likes, dislikes){
     const newAnimal: Animal = new Animal(name, species, location, age, diet, caretakers, sex, likes, dislikes);
     this.animals.push(newAnimal);
