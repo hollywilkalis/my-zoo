@@ -10,8 +10,7 @@ import { Animal } from '../app.component';
 
 export class AnimalsComponent implements OnInit {
 
-  @Input() childAnimals: Animal[]; //brings in animal array as childAnimals
-  // @Input() childDisplay: boolean = true;
+  @Input() childAnimals: Animal[]; //RECEIVES ANIMAL ARRAY
   @Input() filter: number;
 
   selectedAnimal: Animal;
@@ -19,16 +18,11 @@ export class AnimalsComponent implements OnInit {
   constructor() {}
 
   ngOnInit() {
-    console.log(this.childAnimals);
-    console.log(this.selectedAnimal);
 
   }
 
-  editAnimal(animal: Animal): void {
+  editAnimal(animal: Animal): void { 
     this.selectedAnimal = animal;
-    debugger
-    // this.childDisplay = true;
-
   }
 
 

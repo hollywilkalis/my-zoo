@@ -7,33 +7,22 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-  title: string = 'My Zoo';
+  title: string = 'Zoo';
 
-  animals: Animal[] = [
+  animals: Animal[] = [ //SAMPLE ANIMAL ARRAY
     new Animal('Prince', 'Ocelot', 'Tropical Rain Forest Building', 4, 'carnivore', 6, 'male', 'laying in the sunshine', 'toys that are not rope-based'),
     new Animal('Tinkerbell', 'Northwest Black Tailed Deer', 'Northern Trail', 1, 'carnivore', 2, 'female', 'roots and leaves', 'loud noises'),
     new Animal("Moon", "Arctic Fox", "Northern Trail", 2, "Carnivore", 5, "male", "toys", 'Loud noises')
   ];
 
-  // display: boolean = false;
-  //
-  // toggleDisplay() {
-  //   this.display = !this.display;
-  // }
-
-
-  // saveChanges() {
-  //   // this.display = false;
-  // }
-
-  filterByAge: number = 0;
+  filterByAge: number = 0; //SETS DEFAULT
 
   onChange(optionFromMenu) {
     this.filterByAge = parseInt(optionFromMenu);
   }
 }
 
-export class Animal {
+export class Animal { //ANIMAL CONSTRUCTOR
   constructor (
     public name: string,
     public species: string,

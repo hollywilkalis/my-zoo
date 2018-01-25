@@ -8,7 +8,6 @@ import { AnimalInputComponent } from './animal-input/animal-input.component';
 import { AgeFilterPipe } from './age-filter.pipe';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

@@ -3,8 +3,9 @@ import { Animal } from './app.component';
 @Pipe({
   name: 'ageFilter'
 })
+
 export class AgeFilterPipe implements PipeTransform {
-  transform(input: Animal[], filter) {
+  transform(input: Animal[], filter) { 
     var output: Animal[] = [];
     if(filter === 0) {
       return input;

@@ -1,37 +1,39 @@
 
-<h3>Animals in this zoo</h3>
-<div>
+<h3>Our animals:</h3>
+<div id="animalDisplay">
   <div class="card" *ngFor="let animal of childAnimals | ageFilter:filter">
-    <div class="card-header bg-info"><h5 class="card-title text-white">{{animal.name | uppercase }}</h5></div>
+    <div class="card-header bg-info"><h5 class="card-title text-white text-center">{{animal.name | uppercase }}</h5></div>
       <div class="card-body">
-        <p class="card-text">Location: {{animal.location}}<br>
-        Species: {{animal.species}}<br>
-        Age: {{animal.age}}<br>
-        Diet: {{animal.diet}}<br>
-        Caretakers needed: {{animal.caretakers}}<br>
-        Sex: {{animal.sex}}<br>
-        Likes: {{animal.likes}}<br>
-        Dislikes: {{animal.dislikes}}</p>
+        <p class="card-text"><span class="card-label text-info">Location:</span> {{animal.location}}<br>
+        <span class="card-label text-info">Species:</span> {{animal.species}}<br>
+        <span class="card-label text-info">Age:</span> {{animal.age}}<br>
+        <span class="card-label text-info">Diet:</span> {{animal.diet}}<br>
+        <span class="card-label text-info">Caretakers needed:</span> {{animal.caretakers}}<br>
+        <span class="card-label text-info">Sex:</span> {{animal.sex}}<br>
+        <span class="card-label text-info">Likes:</span> {{animal.likes}}<br>
+        <span class="card-label text-info">Dislikes:</span> {{animal.dislikes}}</p>
       </div>
       <button type="button" class="btn btn btn-outline-primary" (click)="editAnimal(animal)">Edit this animal's information</button>
   </div>
 </div>
+<div id="editDisplay">
   <form id="edit-info">
-      <h4 class="text-center">Edit animal's information</h4>
-      <div class="form-group">
-        <label>Update name:</label>
-        <input *ngIf="selectedAnimal" type="text" class="form-control" name="name" [(ngModel)]="selectedAnimal.name" />
-      </div>
-      <div class="form-group">
-        <label>Update age:</label>
-        <input *ngIf="selectedAnimal" type="text" class="form-control" name="age" [(ngModel)]="selectedAnimal.age" />
-      </div>
-      <div class="form-group">
-        <label>Update caretakers:</label>
-        <input *ngIf="selectedAnimal" type="text" class="form-control" name="caretakers" [(ngModel)]="selectedAnimal.caretakers" />
-      </div>
+    <h4 class="text-center">Edit animal's information</h4>
+    <div class="form-group">
+      <label>Update name:</label>
+      <input *ngIf="selectedAnimal" type="text" class="form-control" name="name" [(ngModel)]="selectedAnimal.name" />
+    </div>
+    <div class="form-group">
+      <label>Update age:</label>
+      <input *ngIf="selectedAnimal" type="text" class="form-control" name="age" [(ngModel)]="selectedAnimal.age" />
+    </div>
+    <div class="form-group">
+      <label>Update caretakers:</label>
+      <input *ngIf="selectedAnimal" type="text" class="form-control" name="caretakers" [(ngModel)]="selectedAnimal.caretaSkers" />
+    </div>
 
-      <button type='button' class="btn btn-primary" (click)="saveChanges()">
-        Save
-      </button>
+    <button type='button' class="btn btn-primary" (click)="saveChanges()">
+      Save
+    </button>
   </form>
+</div>
